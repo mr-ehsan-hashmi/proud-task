@@ -1,0 +1,298 @@
+/* CustomToolbar.css */
+.custom-toolbar {
+  background-color: var(--color-gray-6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 5px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 16px 16px 0px 0px;
+  .navigation-buttons {
+    button {
+      border: none;
+      font-weight: 600;
+      height: 39px;
+      // line-height: 39px;
+    }
+  }
+}
+
+.rbc-row-content {
+  button {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+  }
+}
+
+.btn-view {
+  margin-right: 8px;
+}
+
+
+.ant-radio-button-wrapper {
+  width: 108px;
+  height: 39px;
+  line-height: 39px;
+  border: none;
+}
+
+
+.rbc-month-view {
+  overflow: auto;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  .rbc-month-header{
+    font-size: 16px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-white-1);
+    z-index: 101;
+    min-height: 56px;
+    
+    .rbc-header {
+      padding: 10px 3px;
+    }
+  }
+}
+.rbc-event.rbc-selected,
+.rbc-day-slot .rbc-selected.rbc-background-event {
+  background-color: transparent;
+}
+
+.rbc-month-row {
+  min-height: 14vh;
+}
+
+// Events
+
+.custom-event {
+  overflow: hidden;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-white-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 8px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  margin:  1px 0px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.custom-event.default {
+  background-color: #fff;
+  color: var(--color-black-1);
+  font-weight: 600;
+}
+
+.custom-event.confirmed {
+  background-color: var(--color-green-1);
+}
+
+.custom-event.pending {
+  background-color: var(--color-orange-1);
+}
+
+.custom-event.cancelled {
+  background-color: var(--color-danger);
+}
+
+.rbc-row-segment {
+  margin-bottom: -2px;
+  button {
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-gray-1);
+  }
+}
+
+.rbc-event,
+.rbc-day-slot .rbc-background-event {
+  background-color: transparent;
+}
+
+.cutom-calendar-tooltip {
+  min-width: 322px;
+  .ant-tooltip-content {
+    .ant-tooltip-inner {
+      padding: 0px;
+      border-radius: 16px;
+      .tooltip-calendar-details-container {
+        .calendar-tooltip-body {
+          padding: 18px 16px;
+          .popup-event-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-gray-1);
+          }
+        }
+        .calender-tooltip-header {
+          padding: 10px 16px;
+          border-radius: 16px 16px 0px 0px;
+          background: var(--color-gray-6);
+          color: #000;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+// //---- List(Agenda) Styling----------------------------------------
+.rbc-agenda-view {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  overflow: hidden;
+  .rbc-agenda-content{
+    overflow: auto;
+  }
+  table.rbc-agenda-table {
+    border: none;
+    thead {
+      height: 68px;
+      tr > th {
+        padding: 3px 38px;
+        font-size: 18px;
+        font-weight: 600;
+        &:nth-child(2) {
+          padding: 3px 48px;
+        }
+        &:nth-child(3) {
+          padding: 3px 42px;
+        }
+      }
+    }
+    tbody > tr > td {
+      vertical-align: top;
+      height: 68px;
+      min-width: 275px;
+    }
+    .rbc-agenda-time-cell {
+      border-left: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      .custom-event {
+        padding: 6px 14px;
+      }
+    }
+  }
+}
+
+.custom-agenda {
+  padding-left: 31px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  align-items: center;
+}
+
+.custom-agenda-date {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 28px;
+  .date-number {
+    font-weight: 700;
+    margin-right: 10px;
+  }
+}
+
+// ============= Custom Day Style ===============
+
+.day-time-column {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.custom-day-view-table {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  .ant-table {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .ant-table-thead > tr > th:first-child,
+  .ant-table-tbody > tr:first-child > td:first-child {
+    border-top-left-radius: 16px;
+  }
+  .ant-table-thead > tr > th:last-child,
+  .ant-table-tbody > tr:first-child > td:last-child {
+    border-top-right-radius: 16px;
+  }
+  .ant-table-tbody > tr:last-child > td:first-child {
+    border-bottom-left-radius: 16px;
+  }
+  .ant-table-tbody > tr:last-child > td:last-child {
+    border-bottom-right-radius: 16px;
+  }
+}
+
+.booking-calendar-container {
+  height: 670px;
+  // overflow-y: auto;
+  // overflow-x: auto;
+  position: relative;
+}
+
+.booking-calendar-container.day {
+  .rbc-calendar {
+    .custom-toolbar {
+      .navigation-buttons {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+//-------------------- Custom weeek view --------------
+
+.custom-week-view-table {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  .ant-table-row {
+    min-height: 167px;
+    max-height: 167px;
+    height: 167px;
+  }
+  .ant-table {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .ant-table-thead > tr > th:first-child,
+  .ant-table-tbody > tr:first-child > td:first-child {
+    border-top-left-radius: 16px;
+  }
+  .ant-table-thead > tr > th:last-child,
+  .ant-table-tbody > tr:first-child > td:last-child {
+    border-top-right-radius: 16px;
+  }
+  .ant-table-tbody > tr:last-child > td:first-child {
+    border-bottom-left-radius: 16px;
+  }
+  .ant-table-tbody > tr:last-child > td:last-child {
+    border-bottom-right-radius: 16px;
+  }
+}
+
+.custom-week-view-table .ant-table-cell {
+  min-height: 167px;
+  max-height: 167px;
+  overflow: hidden; /* Optional: to hide overflowing content */
+}
